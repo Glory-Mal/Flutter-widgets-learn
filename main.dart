@@ -19,18 +19,38 @@ class MyApp extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Stack(
-                children: [
-                  Container(
-                    color: Colors.blueGrey,
-                    height: 100,
+                children: const [
+                  // Container(
+                  //   color: Colors.blueGrey,
+                  //   height: 100,
+                  // ),
+                  Image(
+                    image: AssetImage('images/gladcode1.png'),
                   ),
-                  const Text(
-                    'Here is a text on top of a container in stack widget',
-                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  Positioned(
+                    bottom: 60,
+                    child: Text(
+                      'Glad coder',
+                      style: TextStyle(
+                        color: Colors.black,
+                        backgroundColor: Colors.blue,
+                        fontSize: 40,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 ],
               ),
-              const Text('Hurray!',style: TextStyle( fontSize: 20),),
+              Container(
+                height: 100,
+                width: 500,
+                color: Colors.cyan,
+                padding: const EdgeInsets.all(20),
+                child: const Text(
+                  'Hurray!',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ],
           ),
         ),
